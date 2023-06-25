@@ -22,10 +22,16 @@ document.addEventListener("keyup", function (event) {
                 if (letraDigitada === palavra[a]) {
                     var alteraUnderscore = document.getElementsByClassName(`underscore${a}`)[0];
                     alteraUnderscore.innerHTML = letraDigitada;
-                    // console.log(alteraUnderscore);
 
+                    if (!letrasCorretas.includes(letraDigitada)) { letrasCorretas.push(letraDigitada); }
                 }
             }
+            console.log(letrasCorretas);
+            if (letrasCorretas.length === new Set(palavra).size) {
+                alert("Parabéns, você acertou! A palavra correta era: " + palavra)
+                reiniciarJogo()
+            }
+
         } else {
             if (!letrasIncorretas.includes(letraDigitada)) {
                 letrasIncorretas.push(letraDigitada);
@@ -39,11 +45,14 @@ document.addEventListener("keyup", function (event) {
                     reiniciarJogo();
                 }
             }
+
         }
-        } else {
-            alert("Somente letras são permitidas!!");
-        }
-    });
+    } else {
+        alert("Somente letras são permitidas!!");
+    }
+});
+
+
 
 function mostraDica() {
     alert("A resposta é ' " + palavra + " '")
