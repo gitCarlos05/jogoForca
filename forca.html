@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script src="jquery-3.7.0.js"></script>
+    <link rel="stylesheet" href="forca.css">
+    <link rel="shortcut icon" href="img/hangman-game-og-share.webp">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da forca</title>
+</head>
+
+<body>
+    <div class="page-top">
+        <h1>Jogo da Forca</h1>
+        <h2>Digite uma letra e tente acertar a palavra</h2>
+        <h3>Vidas: <span id="quantidade-vidas">6</span></h3>
+    </div>
+
+    <div id="campo-palavra">
+
+        <span id="palavra-escolhida"></span>
+        <br><button id="btn-dica" onclick="mostraDica()">Resposta</button>
+
+    </div>
+    <div>
+        <p>Letras incorretas:
+        <span id="letras-incorretas"><b></b></span>
+        </p>
+    </div>
+
+    <script src="forca.js"></script>
+</body>
+
+</html>

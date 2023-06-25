@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.page-top {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+#campo-palavra{
+    text-align: center;
+    row-gap: 15px;
+}
+
+#btn-dica{
+    background-color: rgb(57, 0, 228);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.7s;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#btn-dica:hover{
+    background-color: rgba(0, 89, 255, 0.548);
+    color: rgb(0, 0, 0);
+    box-shadow: 2px 2px rgb(0, 0, 0);
+    transition: 0.7s;
+}
